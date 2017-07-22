@@ -96,7 +96,10 @@ map<string, double>Sims
 [alt](http://i.imgur.com/FyhfoNd.png)
 
    首先我们从所有书中去遍历，并筛选出该用户没有读过的书，假定现在我们要预测图书P的预测评分，则接下来去从所有读过P的人中去寻找，找到与当前用户有相似度的用户，按照上边的公式进行计算并累加，便可以计算出P的预测评分。类似地，便可以计算出所有图书的预测评分。在这里我将所有预测评分存在了一个map<string, double> RankPre中，string指的是书的ISBN码，double指评分。</br>
-  之后便是排序过程，这里我首先写了一个将map中的元素按降序排列并存储在Vector的函数```c++void sortMapByValue(map<string, double>& tMap, vector<pair<string, double> >& tVector)```，将之前的Rankpre排序后存于Rvector中，接下来便可以将Rvector前几个元素输出即为推荐图书了。</br>
+  之后便是排序过程，这里我首先写了一个将map中的元素按降序排列并存储在Vector的函数
+```c++
+void sortMapByValue(map<string, double>& tMap, vector<pair<string, double> >& tVector)
+```，将之前的Rankpre排序后存于Rvector中，接下来便可以将Rvector前几个元素输出即为推荐图书了。</br>
   在计算推荐图书的过程实际上也顺便进行了推荐好友的计算，即相似度Sims已被我们存储。之后再将Sims调用sortMapByValue函数进行降序排列并存于Svector中，再输出前几个元素便为推荐好友。</br>
   同时，还有一点值得注意。如果一个用户读过书，但读的书过于少或过于“冷门”，以至于没有人与其读过相同的书，即没有人和他拥有相似度，则对他仍作冷启动处理。</br>
   以上便是算法的原理与实现的基本内容。还有值得一提的地方，便是如果两个用户读过的书一模一样，直观上来说其相似度应该是非常大的（1），但套用公式分母则是0，无法计算，因此我采用了特殊处理，如果两个用户读过的书完全一样（isequal），则相似度直接置1，这样或多或少能够降低误差考虑了极端情况。
