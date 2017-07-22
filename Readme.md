@@ -94,7 +94,8 @@ file << "\"ISBN\";\"Book-Title\";\"Book-Author\";\"Year-Of-Publication\";\"Publi
 Qt框架的使用
 -------------
 本项目使用了Qt进行了C++的可视化。在Main.cpp函数中，首先要将Qt自动产生的各个界面的头文件引入。之后对每个界面每个按钮的事件进行函数书写即可。如删除图书的事件触发函数：
-```c++void menu_admin::on_pushButton_3_clicked()
+```c++
+void menu_admin::on_pushButton_3_clicked()
 {
     bool ok;
     // 获取字符串
@@ -108,7 +109,8 @@ Qt框架的使用
         QMessageBox::information(this,tr("tip"),
                          tr("cannot find so you cannot delete!"),QMessageBox::Ok);
     }
-}```
+}
+```
 本项目一大亮点之一便是出色的ui设计。而ui设计的完成很大一方面也要归功于Qt这一框架强大的ui设计功能。我们在Qt的ui模式下可视化操作设计过程并通过qss文件进行辅助，而qss文件的语法与css是极其相似的，因此也极易上手。
 
 时空分析
