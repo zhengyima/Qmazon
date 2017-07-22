@@ -10,8 +10,8 @@
 系统展示图
 -------------
 </br>
-![](http://i.imgur.com/eQuoHYh.png)
-![](http://i.imgur.com/QJBUnHO.png)
+![Alt text](http://i.imgur.com/eQuoHYh.png)
+![Alt text](http://i.imgur.com/QJBUnHO.png)
 
 需求分析
 -------------
@@ -40,6 +40,7 @@ books.insert(map<string, Book>::value_type(IS, newbook));
 先用ifstream打开文件，之后用
 ```c++getline(file, value, ';');
 string(value, 1, value.length() - 2);```
+
 读入IS与ID，再直接利用map的索引将信息读入每个信息的对应项之中。并且增加读过这个book的用户信息，与这个user看过的图书信息。```c++
 users[ID].booksRead.insert(map<string, int>::value_type(IS, rank));
 	books[IS].usersRead.insert(map<string, int>::value_type(ID, rank));```
