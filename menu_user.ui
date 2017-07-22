@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menu_user</class>
+ <widget class="QWidget" name="menu_user">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>401</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(235, 242, 249);
+</string>
+  </property>
+  <widget class="QTextBrowser" name="textBrowser">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>241</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> border-radius: 10px;
+border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 3px; /*边框圆角半径*/
+     border-color: rgb(198, 198, 198,198);/*边框颜色*/
+background-color:rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>321</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="spinBox">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>210</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-style: outset;/*边框样式*/
+ border-color: rgb(198, 198, 198,198);/*边框颜色*/
+font: 9pt &quot;黑体&quot;;</string>
+   </property>
+   <property name="maximum">
+    <number>10</number>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>260</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> border-radius: 10px;
+border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 3px; /*边框圆角半径*/
+     border-color: rgb(198, 198, 198,198);/*边框颜色*/
+background-color:rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>评论一番吧</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>151</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(127, 127, 127);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>205</y>
+     <width>101</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 9pt &quot;微软雅黑&quot;;
+     background-color: rgb(0, 170, 255);/*背景色*/
+      border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 10px; /*边框圆角半径*/
+     border-color: rgba(255, 225, 255, 30);/*边框颜色*/
+     font: bold 14px;/*字体*/
+         color:rgb(255, 255, 255);/*字体颜色*/
+     padding: 6px; /*填衬*/
+}
+
+QPushButton:hover{ /*鼠标悬停在按钮上时*/
+        background-color:rgb(12, 215, 255);
+        border-color: rgb(12, 215, 255);
+        color:rgba(0, 0, 0, 200);
+}
+
+QPushButton:pressed { /*按钮被按下时*/
+     background-color:rgba(100,255,100, 200);
+         border-color: rgba(255, 225, 255, 30);
+     border-style: inset;
+        color:rgba(0, 0, 0, 100);
+}</string>
+   </property>
+   <property name="text">
+    <string>评分</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>300</y>
+     <width>191</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 9pt &quot;微软雅黑&quot;;
+     background-color: rgb(0, 170, 255);/*背景色*/
+      border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 10px; /*边框圆角半径*/
+     border-color: rgba(255, 225, 255, 30);/*边框颜色*/
+     font: bold 14px;/*字体*/
+         color:rgb(255, 255, 255);/*字体颜色*/
+     padding: 6px; /*填衬*/
+}
+
+QPushButton:hover{ /*鼠标悬停在按钮上时*/
+        background-color:rgb(12, 215, 255);
+        border-color: rgb(12, 215, 255);
+        color:rgba(0, 0, 0, 200);
+}
+
+QPushButton:pressed { /*按钮被按下时*/
+     background-color:rgba(100,255,100, 200);
+         border-color: rgba(255, 225, 255, 30);
+     border-style: inset;
+        color:rgba(0, 0, 0, 100);
+}</string>
+   </property>
+   <property name="text">
+    <string>提交评论</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>241</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> border-radius: 10px;
+border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 3px; /*边框圆角半径*/
+     border-color: rgb(198, 198, 198,198);/*边框颜色*/
+background-color:rgb(255, 255, 255);</string>
+   </property>
+   <property name="placeholderText">
+    <string>请输入搜索内容</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>130</y>
+     <width>89</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 9pt &quot;微软雅黑&quot;;
+     background-color: rgb(0, 170, 255);/*背景色*/
+      border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 10px; /*边框圆角半径*/
+     border-color: rgba(255, 225, 255, 30);/*边框颜色*/
+     font: bold 14px;/*字体*/
+         color:rgb(255, 255, 255);/*字体颜色*/
+     padding: 6px; /*填衬*/
+}
+
+QPushButton:hover{ /*鼠标悬停在按钮上时*/
+        background-color:rgb(12, 215, 255);
+        border-color: rgb(12, 215, 255);
+        color:rgba(0, 0, 0, 200);
+}
+
+QPushButton:pressed { /*按钮被按下时*/
+     background-color:rgba(100,255,100, 200);
+         border-color: rgba(255, 225, 255, 30);
+     border-style: inset;
+        color:rgba(0, 0, 0, 100);
+}</string>
+   </property>
+   <property name="text">
+    <string>搜索好友</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>130</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 9pt &quot;微软雅黑&quot;;
+     background-color: rgb(0, 170, 255);/*背景色*/
+      border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 10px; /*边框圆角半径*/
+     border-color: rgba(255, 225, 255, 30);/*边框颜色*/
+     font: bold 14px;/*字体*/
+         color:rgb(255, 255, 255);/*字体颜色*/
+     padding: 6px; /*填衬*/
+}
+
+QPushButton:hover{ /*鼠标悬停在按钮上时*/
+        background-color:rgb(12, 215, 255);
+        border-color: rgb(12, 215, 255);
+        color:rgba(0, 0, 0, 200);
+}
+
+QPushButton:pressed { /*按钮被按下时*/
+     background-color:rgba(100,255,100, 200);
+         border-color: rgba(255, 225, 255, 30);
+     border-style: inset;
+        color:rgba(0, 0, 0, 100);
+}</string>
+   </property>
+   <property name="text">
+    <string>搜索图书</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>350</y>
+     <width>104</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 9pt &quot;微软雅黑&quot;;
+     background-color: rgb(0, 170, 255);/*背景色*/
+      border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 10px; /*边框圆角半径*/
+     border-color: rgba(255, 225, 255, 30);/*边框颜色*/
+     font: bold 14px;/*字体*/
+         color:rgb(255, 255, 255);/*字体颜色*/
+     padding: 6px; /*填衬*/
+}
+
+QPushButton:hover{ /*鼠标悬停在按钮上时*/
+        background-color:rgb(12, 215, 255);
+        border-color: rgb(12, 215, 255);
+        color:rgba(0, 0, 0, 200);
+}
+
+QPushButton:pressed { /*按钮被按下时*/
+     background-color:rgba(100,255,100, 200);
+         border-color: rgba(255, 225, 255, 30);
+     border-style: inset;
+        color:rgba(0, 0, 0, 100);
+}</string>
+   </property>
+   <property name="text">
+    <string>更改我的信息</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>350</y>
+     <width>81</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 9pt &quot;微软雅黑&quot;;
+     background-color: rgb(0, 170, 255);/*背景色*/
+      border-style: outset;/*边框样式*/
+     border-width: 4px;  /*边框宽度为4像素*/
+     border-radius: 10px; /*边框圆角半径*/
+     border-color: rgba(255, 225, 255, 30);/*边框颜色*/
+     font: bold 14px;/*字体*/
+         color:rgb(255, 255, 255);/*字体颜色*/
+     padding: 6px; /*填衬*/
+}
+
+QPushButton:hover{ /*鼠标悬停在按钮上时*/
+        background-color:rgb(12, 215, 255);
+        border-color: rgb(12, 215, 255);
+        color:rgba(0, 0, 0, 200);
+}
+
+QPushButton:pressed { /*按钮被按下时*/
+     background-color:rgba(100,255,100, 200);
+         border-color: rgba(255, 225, 255, 30);
+     border-style: inset;
+        color:rgba(0, 0, 0, 100);
+}</string>
+   </property>
+   <property name="text">
+    <string>上一步</string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="graphicsView_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-10</y>
+     <width>521</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 146, 204);</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>30</y>
+     <width>341</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 146, 204);
+
+font: 75 25pt &quot;华文琥珀&quot;;
+color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>图书管理与推荐系统</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>180</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(127, 127, 127);</string>
+   </property>
+   <property name="text">
+    <string>ISBN</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_2">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>180</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(127, 127, 127);</string>
+   </property>
+   <property name="text">
+    <string>标题</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_3">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>180</y>
+     <width>89</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(127, 127, 127);</string>
+   </property>
+   <property name="text">
+    <string>作者</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>182</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(127, 127, 127);</string>
+   </property>
+   <property name="text">
+    <string>搜索方式：</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>myqss.qss</file>
+    </qresource>
+    <qresource prefix="/image">
+        <file>zy617945748_1482237009817_97.png</file>
+    </qresource>
+</RCC>
