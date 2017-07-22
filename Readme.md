@@ -30,31 +30,42 @@
 books.insert(map<string, Book>::value_type(IS, newbook));
 ```
 加入到总的book这个map类型的对象中中。其中IS为newbook的ISBN码，直接用来索引图书。
-书的各类信息分隔使用```c++getline(file, value, ';');```
-```c++IS = string(value, 1, value.length() - 2);```
+书的各类信息分隔使用
+```c++
+getline(file, value, ';');
+IS = string(value, 1, value.length() - 2);
+```
 表示读到“；”之前的数据，并且IS的内容是value去掉最前面的“与最后面的”所得。
 最后使用```c++file.close();```关闭文件。
 ####2、用户信息
 与图书信息的读入过程类似。
 ####3、评分信息
 先用ifstream打开文件，之后用
-```c++getline(file, value, ';');
-string(value, 1, value.length() - 2);```
+```c++
+getline(file, value, ';');
+string(value, 1, value.length() - 2);
+```
 
-读入IS与ID，再直接利用map的索引将信息读入每个信息的对应项之中。并且增加读过这个book的用户信息，与这个user看过的图书信息。```c++
+读入IS与ID，再直接利用map的索引将信息读入每个信息的对应项之中。并且增加读过这个book的用户信息，与这个user看过的图书信息。
+```c++
 users[ID].booksRead.insert(map<string, int>::value_type(IS, rank));
-	books[IS].usersRead.insert(map<string, int>::value_type(ID, rank));```
+books[IS].usersRead.insert(map<string, int>::value_type(ID, rank));
+```
 最后使用file.close();关闭文件。并且读完用户全部评分信息后，使用迭代器将每个book与每个user的平均评分求出。例下面就是求出每个book的平均分的代码。
-```c++	map<string, Book>::iterator iter = books.begin();
+```c++	
+map<string, Book>::iterator iter = books.begin();
 	for (; iter != books.end(); iter++)
 	{
 		iter->second.aveRank = iter->second.sum / iter->second.cnt;
-	}```
+	}
+```
 ####4、文件回写
 由于又增加修改删除的图书用户等，在使用过一遍系统后要将所有信息全部重新写入。
 #####book文件写回
 先用ofstream打开文件，之后先写回标题栏。
-```c++ file << "\"ISBN\";\"Book-Title\";\"Book-Author\";\"Year-Of-Publication\";\"Publisher\""<< ";\"Image-URL-S\";\"Image-URL-M\";\"Image-URL-L\"" << endl;```
+```c++ 
+file << "\"ISBN\";\"Book-Title\";\"Book-Author\";\"Year-Of-Publication\";\"Publisher\""<< ";\"Image-URL-S\";\"Image-URL-M\";\"Image-URL-L\"" << endl;
+```
 之后将每一类信息写回，双引号使用\”表示。
 最后```c++file.close();```关闭文件。
 #####user文件写回。
