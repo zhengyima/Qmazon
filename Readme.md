@@ -67,22 +67,38 @@ map<string, Book>::iterator iter = books.begin();
 file << "\"ISBN\";\"Book-Title\";\"Book-Author\";\"Year-Of-Publication\";\"Publisher\""<< ";\"Image-URL-S\";\"Image-URL-M\";\"Image-URL-L\"" << endl;
 ```
 之后将每一类信息写回，双引号使用\”表示。
-最后```c++file.close();```关闭文件。
+最后
+```c++
+file.close();
+```
+关闭文件。
 #####user文件写回。
 先用ofstream打开文件，之后先写回标题栏。
-	```c++file2 << "\"User-ID\";\"Location\";\"Age\"" << endl;```
+```c++
+file2 << "\"User-ID\";\"Location\";\"Age\"" << endl;
+```
 之后将每一类信息写回，双引号使用\”表示。
-最后```c++file.close();```关闭文件。
+最后
+```c++
+file.close();
+```
+关闭文件。
 #####rank文件写回。先用ofstream打开文件，之后先写回标题栏。
-```c++	file3 << "\"User-ID\";\"ISBN\";\"Book-Rating\"" << endl;```
+```c++
+file3 << "\"User-ID\";\"ISBN\";\"Book-Rating\"" << endl;
+```
 之后将每一类信息写回，双引号使用\”表示。
-最后```c++file.close();```关闭文件。
+最后
+```c++
+file.close();
+```
+关闭文件。
 
 基于用户的协同过滤推荐算法
 -------------
 对于一个已经读过几本书的用户，我们采用的推荐方法便是采用正常的基于用户的协同过滤算法。基于用户的协同过滤推荐算法的基本思想便是：首先依据依据用户对物品的评价计算出所有用户之间的相似度，之后选出与当前用户最相似的N个用户，再用N个邻居用户对物品的评分，预测当前用户对没有浏览过的物品的可能评分，最后按照预测出的可能评分的高低向当前用户推荐物品。 接下来将对算法的实现进行详细介绍。算法在程序中的位置为recommendsystem1.cpp中的
-```
-c++User:: getrecommendation()
+```c++
+User:: getrecommendation()
 ```
 首先我们要先进行对与所有用户的相似度计算。计算的基本公式如下：
  
