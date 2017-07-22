@@ -10,8 +10,9 @@
 系统展示图
 -------------
 </br>
-![Alt text](http://i.imgur.com/eQuoHYh.png)
-![Alt text](http://i.imgur.com/QJBUnHO.png)
+![Alt](http://i.imgur.com/eQuoHYh.png)
+
+![Alt](http://i.imgur.com/QJBUnHO.png)
 
 需求分析
 -------------
