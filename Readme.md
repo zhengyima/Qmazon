@@ -7,6 +7,9 @@
 
 数据集 ：http://www2.informatik.uni-freiburg.de/~cziegler/BX/
 
+有对此项目感兴趣的朋友欢迎通过邮件与我交流：zymaa@ruc.edu.cn
+或通过Wechat:r7ma_1
+
 系统展示图
 -------------
 </br>
