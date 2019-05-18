@@ -333,10 +333,12 @@ void User::getrecommendation() {
 void readFile()
 {
     QString runPath = QCoreApplication::applicationDirPath();
+    cout<<"?"<<endl;
     runPath.append("/BX-Books.csv");
+    cout<<"!?"<<endl;
     string IS, ID, str, value;
     //ifstream file("F:\\Qt_book2\\BX-Books.csv");
-    //cout<<runPath.toStdString();
+    cout<<runPath.toStdString()<<endl;
     ifstream file(runPath.toStdString());
     if (file.peek() == EOF)
     {
@@ -351,38 +353,50 @@ void readFile()
     getline(file, value, ';');
     getline(file, value, ';');
     getline(file, value, '\n');
+   // getline(file, value, ';');
+    cout<<value<<endl;
 
+    int cnt = 0;
     while (!file.eof())
     {
         Book newbook;
-
-        getline(file, value, ';');
+        //getline(file, value, '\n');
         IS = string(value, 1, value.length() - 2);
         newbook.id=IS;
         getline(file, value, ';');
+
+//        cout<<value<<endl;
         newbook.title = string(value, 1, value.length() - 2);
-
         getline(file, value, ';');
+
+//        cout<<value<<endl;
         newbook.author = string(value, 1, value.length() - 2);
-
         getline(file, value, ';');
+
+//        cout<<value<<endl;
         str = string(value, 1, value.length() - 2);
         newbook.year = str;
-
         getline(file, value, ';');
+
+//        cout<<value<<endl;
         newbook.publisher = string(value, 1, value.length() - 2);
-
         getline(file, value, ';');
+
+//        cout<<value<<endl;
         newbook.urlS = string(value, 1, value.length() - 2);
-
         getline(file, value, ';');
+
+//        cout<<value<<endl;
         newbook.urlM = string(value, 1, value.length() - 2);
-
         getline(file, value, '\n');
+//        cout<<value<<endl;
         newbook.urlL = string(value, 1, value.length() - 2);
-
         books.insert(map<string, Book>::value_type(IS, newbook));
+        cnt += 1;
+        cout<<cnt<<endl;
     }
+    cout<<"!?@"<<endl;
+
     file.close();
     maxBook = atoi(IS.c_str());
 QString runPath2 = QCoreApplication::applicationDirPath();
@@ -397,32 +411,54 @@ QString runPath2 = QCoreApplication::applicationDirPath();
     getline(file2, value, ';');
     getline(file2, value, ';');
     getline(file2, value, '\n');
+//    cout<<"!?#"<<endl;
+    cnt = 0;
     while (!file2.eof())
     {
         User newUser;
 
         getline(file2, value, ';');
+
         ID = string(value, 1, value.length() - 2);
+        cout<<ID<<"#"<<endl;
         newUser.himself = ID;
-        getline(file2, value, ',');
-        newUser.town = string(value, 1, value.length() - 1);
-        getline(file2, value, ',');
-        newUser.city = string(value, 1, value.length() - 1);
+//        getline(file2, value, ',');
+//        cout<<value<<"#"<<endl;
+//        newUser.town = string(value, 1, value.length() - 1);
+//        cout<<value<<"#"<<endl;
+//        getline(file2, value, ',');
+//        newUser.city = string(value, 1, value.length() - 1);
+//        cout<<value<<"#"<<endl;
         getline(file2, value, ';');
+        newUser.town = string(value, 1, value.length() - 2);
+        newUser.city = string(value, 1, value.length() - 2);
         newUser.country = string(value, 1, value.length() - 2);
+//        cout<<value<<"#"<<endl;
 
-        getline(file2, value, ';');
-        str = string(value, 1, value.length() - 2);
-        newUser.age = atoi(str.c_str());
-
+//        getline(file2, value, ';');
         getline(file2, value, '\n');
-        newUser.password=string(value, 1, value.length() - 2);
+        /*
+        str = string(value, 1, value.length() - 2);
+        if(str != "NULL")
+        newUser.age = atoi(str.c_str());
+        else {
+            newUser.age = 0;
+        }*/
+        newUser.age = 0;
+
+//        getline(file2, value, '\n');
+        //newUser.password=string(value, 1, value.length() - 2);
+        newUser.password = "123456";
 
 
 
         users.insert(map<string, User>::value_type(ID, newUser));
+        cout<<cnt<<endl;
+        cnt += 1;
     }
+    cout<<"?"<<endl;
     maxUser = atoi(ID.c_str());
+    cout<<"@"<<endl;
     file2.close();
 }
 
@@ -1669,10 +1705,13 @@ void signup::on_pushButton_3_clicked()
 }
 int main(int argc, char* argv[])
 {
+
     QApplication a(argc, argv);
     signin* s=new signin();
     s->show();
+
     readFile();
+    cout<<"test"<<endl;
     Rank();
     Administrators.insert(map<string, string>::value_type("mzy", "q317958662"));
     Administrators.insert(map<string, string>::value_type("lsq", "????"));

@@ -14,7 +14,7 @@ class menu_admin : public QWidget
 public:
     explicit menu_admin(QWidget *parent = 0);
     ~menu_admin();
-    void menu_admin::closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event);
 
 private slots:
     void on_pushButton_clicked();

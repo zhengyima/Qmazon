@@ -15,7 +15,7 @@ public:
     explicit menu_user(QWidget *parent = 0);
     ~menu_user();
     Ui::menu_user *ui;
-    void menu_user::closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event);
 
 private slots:
     void on_pushButton_2_clicked();
